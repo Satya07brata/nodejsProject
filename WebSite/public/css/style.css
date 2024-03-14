@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    position:relative;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+:root{
+    --main-bg:#1e272e;
+    --main-color:#0097e6;
+}
+html{
+    font-size: 62.5%;
+}
+
+.main_menu{
+    background-color: #1e272e;
+}
+.navbar{
+    color: #fff;
+    background-color: #1e272e;
+    padding: 2rem 0;
+    width: 100%;
+}
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+    margin-left: 3rem;
+
+}
+.navbar a:hover{
+    color: #0501ffc5;
+}
+
+
+.navbar-toggler{
+    background-color: grey;
+}
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: #0097e6;
+}
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.main_header_left{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+.main_header_left p{
+    font-size: 2rem;
+}
+.main_header_left h1{
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+
+}
+.main_header_left span{
+    color: #0097e6;
+    font-weight: 700;
+}
+.main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+    outline: none;
+}
+.main_header_left button:hover{
+    box-shadow:0 8px 6px -6px #0097e6 ;
+}
+.main_header_right{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.main_header_right  img{
+    height: 42rem;
+
+
+}
+.main_header_right  figure img{
+    filter: drop-shadow(1rem 1rem 1rem rgba(0,0,0,0.3));
+    animation: zoomEffect 2s ease-in-out infinite;
+    
+}
+@keyframes zoomEffect {
+
+    0%, 100% {
+      transform: scale(1, 1);
+    }
+
+    50% {
+      transform: scale(1.02, 1.02);
+    }
+  }
+.footer {
+    background-color:#1e272e ;
+    width: 100vw;
+    height: 6rem;
+    color: white;
+    font-family: sans-serif,Roboto;
+    font-weight: 500;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    font-size: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+}
+.social-icons a:hover{
+    color: #0097e6;
+}
+
+p {
+   margin-top: 10px; 
+}
+.footer p i{
+    animation: zoomIcon 2s ease infinite;
+}
+@keyframes zoomIcon{
+    0%, 100% {
+        transform: scale(1, 1);
+      }
+  
+      50% {
+        transform: scale(1.4, 1.4);
+    }
+}    
+
+@media (max-width:1300px){
+
+   .main_header_left{
+    height: auto;
+    margin:5rem 0;
+    }
+
+    .main_header_right{
+        height: auto;
+        
+    }
+    .main_header_right img {
+        height: 20rem;
+    }
+    .main_header_right  figure img{
+        margin-top: 40px;
+    }
+}
+
+.temp-form{
+    width: 60%;
+    position: relative;
+    margin:10rem auto 6rem ;
+    
+}
+.temp-form  #cityname{
+    width: 100%;
+    background-color: #1e202b;
+    padding: 2rem 5rem 2rem 2rem ;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+::placeholder{
+    color: #bfc1c8;
+}
+.temp-form #submitionBtn{
+    position: absolute;
+    top:5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background-color: #3a8ad9;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: white;
+    font-size: 1.9rem;
+    
+    
+}
+.temp-form #submitionBtn:active{
+    color:#3a8ad9;
+    background-color: white;
+}
+.tempInformation{
+    width: 50rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: #323544;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: "Roboto",sans-serif;
+}
+@media only screen and (max-width: 450px) {
+    .tempInformation {
+      width: 35rem;
+    }
+  }
+
+.top_layer{
+    width: 100%;
+    height: 20%;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+.top_layer p{
+    color: #fff;
+    font-weight: 300;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+.main_layer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.main_layer #city_name{
+    padding: 2rem 0;
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+
+}
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-around;
+    color:#fff;
+}
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.fa-solid{
+    color: #009ad8;
+}
+sup{
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+/* .data_hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+} */
+
